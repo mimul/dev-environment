@@ -4,3 +4,4 @@
 # trello, github, slack을 통한 개발 프로세스 가이드 추가
 # inttllij, sublime, vim 사용법 추가(코드 리뷰 추가)
 # Selenium 자동 테스트 추가
+# Selenium 자동 테스트 리뷰 수정내용 추가(Singleton Pattern추가)
