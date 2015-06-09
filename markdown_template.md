@@ -69,7 +69,7 @@ API설명
 >
 > > 공간을 두고 `>` 를 넣으면 인용에 인용을 할 수 있습니다.
 
-라이센스
+License
 ---
 Copyright &copy; 2015 (주) 와이즈에코.
 Licensed under the [Apache License, Version 2.0][Apache]

@@ -102,3 +102,10 @@ Trello, Github, Slack을 활용한 개발 프로세스
 
 #### 5. Trello 카드 Done 리스트로 이동
 - 배포후 확인에서 이상이 없다면, Trello의 카드를 [Done(Sprint1 - 날짜기간)] 리스트에 이동시키고, 이슈를 close한다.
+
+License
+---
+Copyright &copy; 2015 (주) 와이즈에코.
+Licensed under the [Apache License, Version 2.0][Apache]
+Distributed under the [MIT License][mit].
+Dual licensed under the [MIT license][MIT] and [GPL license][GPL].
