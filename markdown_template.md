@@ -54,14 +54,14 @@ API설명
 ### 목록
 1. [미물 블로그 : 쿠키 삭제 방법](http://mimul.com/)
     * ~~블로그 내용 참조.~~
-    ![사진 1](http://github.com/unicorn.png)
+    ![사진 1](https://avatars0.githubusercontent.com/u/6541847?v=3)
 
 2. [깃허브 외부 소스 참조][link]
     * github.com
     ![사진 2][image]
 
   [link]: http://github.com
-  [image]: http://github.com/github.png
+  [image]: https://avatars2.githubusercontent.com/u/9919?v=3
 
 ### 참조
 > 어디어디에서 인용했습니다.
