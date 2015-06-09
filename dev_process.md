@@ -1,12 +1,12 @@
 Trello, Github, Slack을 활용한 개발 프로세스
 ======================
 개발 흐름
----
+---------------
 ![사진 1][dev_process]
 [dev_process]: http://www.mimul.com/pebble/default/images/blog/Projects/dev_process.png
 
 개발 프로세스(Trello, Github, Slack)
----
+---------------
 #### 1. Trello Card 만들기
 1.1 기본적인 Trello 흐름
 + `Trello에서 개발해야 할 기능을 [To Do(Story)]라는 이름의 리스트에 카드로 만든다.`
@@ -104,8 +104,12 @@ Trello, Github, Slack을 활용한 개발 프로세스
 - 배포후 확인에서 이상이 없다면, Trello의 카드를 [Done(Sprint1 - 날짜기간)] 리스트에 이동시키고, 이슈를 close한다.
 
 License
----
+---------------
 Copyright &copy; 2015 (주) 와이즈에코.
 Licensed under the [Apache License, Version 2.0][Apache]
 Distributed under the [MIT License][mit].
 Dual licensed under the [MIT license][MIT] and [GPL license][GPL].
+
+[Apache]: http://www.apache.org/licenses/LICENSE-2.0
+[MIT]: http://www.opensource.org/licenses/mit-license.php
+[GPL]: http://www.gnu.org/licenses/gpl.html

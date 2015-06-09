@@ -5,7 +5,7 @@
 단락을 나눌때는 빈라인을 넣으면 됩니다.
 
 사용법
----
+---------------
 ### 인라인 코드
 인라인 **code**는 `Backtick`(` ` `)으로 묶는다.
 
@@ -21,7 +21,7 @@
 	}
 ```
 매개 변수 설명
----
+---------------
 ```java
     public static void deleteCookie(HttpServletResponse response, String cookieName)
 ```
@@ -32,7 +32,7 @@
     _쿠키명_ 은 삭제할 쿠키명
 
 API설명
----
+---------------
 ### API 목록
 | 서비스  | 카테고리  | 설명                    | 관련 DB    |
 | :---- |:-------:| ---------------------: | :-------- |
@@ -51,7 +51,7 @@ API설명
 |  test  |  test  |
 
 관련 정보
----
+---------------
 ### 목록
 1. [미물 블로그 : 쿠키 삭제 방법](http://mimul.com/)
     * ~~블로그 내용 참조.~~
@@ -70,7 +70,7 @@ API설명
 > > 공간을 두고 `>` 를 넣으면 인용에 인용을 할 수 있습니다.
 
 License
----
+---------------
 Copyright &copy; 2015 (주) 와이즈에코.
 Licensed under the [Apache License, Version 2.0][Apache]
 Distributed under the [MIT License][mit].
