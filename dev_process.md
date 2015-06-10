@@ -90,14 +90,17 @@ Trello, Github, Slack을 활용한 개발 프로세스
 	![사진 8][git_push]
 
 2.9 병합(Merge)
-리뷰가 완료되면 병합은 두가지 방법으로 진행할 수 있다. 첫번째는 github 사이트에서 merge를 할 수 있다. 즉,
+리뷰가 완료되면 병합은 두가지 방법으로 진행할 수 있다.
 
-- 리뷰가 완료되면 Github에서 Merge pull request를 클릭하고 Confirm merge 버튼을 클릭해서 merge를 완료한다.
-- 혹은, 로컬에서 커맨드로 병합을 완료할 수 있다.
+- 첫번째 방법은 리뷰가 완료되면 Github에서 Merge pull request를 클릭하고 Confirm merge 버튼을 클릭해서 merge를 완료할 수 있다.
+- 두번째 방법은 로컬에서 커맨드로 병합을 완료할 수 있다.
 ```
 > git checkout master
 > git merge --no-ff dev_standard
 ```
+- 머지가 완료되고 해당 Pull Request가 close 된 것을 확인할 수 있다.
+
+	![사진 9][git_merged]
 
 - Github에서 Delete branch 버튼을 클릭하거나 아래 로컬에서 커맨드로 원격 브랜치를 삭제한다.
 ````
@@ -118,6 +121,7 @@ Trello, Github, Slack을 활용한 개발 프로세스
 [create_pullrequest]: http://www.mimul.com/pebble/default/images/blog/Projects/create_pullrequest.png
 [git_review]: http://www.mimul.com/pebble/default/images/blog/Projects/git_review.png
 [git_push]: http://www.mimul.com/pebble/default/images/blog/Projects/git_push.png
+[git_merged]: http://www.mimul.com/pebble/default/images/blog/Projects/git_merged.png
 
 #### 3. 배포하기
 - 테스트 코드를 돌리고, jenkins나 자체 배포 도구를 활용하여 운영 서버에 소스를 배포한다.
