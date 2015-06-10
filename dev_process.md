@@ -58,30 +58,54 @@ Trello, Github, Slack을 활용한 개발 프로세스
 > git add .
 > git rebase --continue
 ```
+
 2.6 Pull Request 요청하기 전에 Trello 카드도 [Review] 리스트로 옮기고 Checklist 하나를 더 만들어서 Review 내용(리뷰 담당자 포함)을 기술하면 Trello 알림을 통해 담당자가 리뷰어임을 알게 된다. 아니면 Trello 카드를 만들때 Review Checklist를 미리 만들어서 리뷰 대상자를 등록한다.
 
 2.7 Pull Request 요청
+- 아래 커맨드로 Pull Request 요청을 한다.
 ```
 > git push origin dev_standard
 ```
 - push 후 Github의 repository로 이동해서 Compare & pull request 버튼 클릭하고, 코멘트[To close VOY-201(jira issue 번호), 혹은 github issue 사용하면 #1234로] 남기고 Create pull request 버튼 클릭한다.
 
-![사진 5][create_pullrequest]
+	![사진 5][create_pullrequest]
 
-- 이때 Pull Request 정보가 Slack을 통해 담당자에게 보내지게 되고 리뷰를 수행한다.
+- 이때 Pull Request 정보가 Slack을 통해 담당자에게 보내지게 된다.
 
-![사진 6][slack_pullrequest]
+	![사진 6][slack_pullrequest]
 
-- 리뷰 수행 후 수정사항이 있으면 수정 후 Pull Request를 다시 보내고, 수정 사항이 없으면 Github에서 Merge pull request를 클릭하고 Confirm merge 버튼을 클릭해서 merge를 완료한다.
+2.8 리뷰 수행
+- 리뷰어는 file change 버튼을 눌러 master 브랜치와의 소스 차이를 보면서 리뷰어의 의견이 있을 경우 소스 중간에 원하는 자리에 코멘트를 남긴다.
+
+	![사진 7][git_review]
+
+- 리뷰어는 코멘트나 리뷰 회의를 통해 나온 수정사항을 반영해서 다시 push를 한다.
+```
+> git commit -a -m "README 파일의 기술 아티클 문구를 기술 블로그로 수정"
+> git push origin dev_standard
+```
+
+- 수정한 푸시도 Pull Request에 반영된다.
+
+	![사진 8][git_push]
+
+2.9 병합(Merge)
+리뷰가 완료되면 병합은 두가지 방법으로 진행할 수 있다. 첫번째는 github 사이트에서 merge를 할 수 있다. 즉,
+
+- 리뷰가 완료되면 Github에서 Merge pull request를 클릭하고 Confirm merge 버튼을 클릭해서 merge를 완료한다.
+- 혹은, 로컬에서 커맨드로 병합을 완료할 수 있다.
+```
+> git checkout master
+> git merge --no-ff dev_standard
+```
 
 - Github에서 Delete branch 버튼을 클릭하거나 아래 로컬에서 커맨드로 원격 브랜치를 삭제한다.
-```
+````
 > git push origin :dev_standard
 ```
 
-2.8 Review 후 수정사항이 있는 경우 수정한 다음 2.7을 재 수행한다.
-
-2.9 로컬 master 동기화
+2.10 로컬 master 동기화 및 로컬 브랜치 삭제
+- 로컬 master 동기화
 ```
 > git checkout master && git pull origin master && git fetch -p origin
 ```
@@ -92,6 +116,8 @@ Trello, Github, Slack을 활용한 개발 프로세스
 
 [slack_pullrequest]: http://www.mimul.com/pebble/default/images/blog/Projects/slack_pullrequest.png
 [create_pullrequest]: http://www.mimul.com/pebble/default/images/blog/Projects/create_pullrequest.png
+[git_review]: http://www.mimul.com/pebble/default/images/blog/Projects/git_review.png
+[git_push]: http://www.mimul.com/pebble/default/images/blog/Projects/git_push.png
 
 #### 3. 배포하기
 - 테스트 코드를 돌리고, jenkins나 자체 배포 도구를 활용하여 운영 서버에 소스를 배포한다.
