@@ -90,9 +90,7 @@ Trello, Github, Slack을 활용한 개발 프로세스
 	![사진 8][git_push]
 
 2.9 병합(Merge)
-리뷰가 완료되면 병합은 두가지 방법으로 진행할 수 있다.
-
-- 첫번째 방법은 리뷰가 완료되면 Github에서 Merge pull request를 클릭하고 Confirm merge 버튼을 클릭해서 merge를 완료할 수 있다.
+- 리뷰가 완료되면 병합은 두가지 방법으로 진행할 수 있다. 첫번째 방법은 리뷰가 완료되면 Github에서 Merge pull request를 클릭하고 Confirm merge 버튼을 클릭해서 merge를 완료할 수 있다.
 - 두번째 방법은 로컬에서 커맨드로 병합을 완료할 수 있다.
 ```
 > git checkout master
