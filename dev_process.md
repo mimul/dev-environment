@@ -93,14 +93,15 @@ Trello, Github, Slack을 활용한 개발 프로세스
 리뷰가 완료되면 병합은 두가지 방법으로 진행할 수 있다. 첫번째는 github 사이트에서 merge를 할 수 있다. 즉,
 
 - 리뷰가 완료되면 Github에서 Merge pull request를 클릭하고 Confirm merge 버튼을 클릭해서 merge를 완료한다.
+- 혹은, 로컬에서 커맨드로 병합을 완료할 수 있다.
+```
+> git checkout master
+> git merge --no-ff dev_standard
+```
+
 - Github에서 Delete branch 버튼을 클릭하거나 아래 로컬에서 커맨드로 원격 브랜치를 삭제한다.
 ````
 > git push origin :dev_standard
-```
-
-혹은, 로컬에서 커맨드로 병합을 완료할 수 있다.
-```
-> git merge --no-ff dev_standard
 ```
 
 2.10 로컬 master 동기화 및 로컬 브랜치 삭제
