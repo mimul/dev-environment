@@ -68,20 +68,36 @@ Trello, Github, Slack을 활용한 개발 프로세스
 
 ![사진 5][create_pullrequest]
 
-- 이때 Pull Request 정보가 Slack을 통해 담당자에게 보내지게 되고 리뷰를 수행한다.
+- 이때 Pull Request 정보가 Slack을 통해 담당자에게 보내지게 된다.
 
 ![사진 6][slack_pullrequest]
 
-- 리뷰 수행 후 수정사항이 있으면 수정 후 Pull Request를 다시 보내고, 수정 사항이 없으면 Github에서 Merge pull request를 클릭하고 Confirm merge 버튼을 클릭해서 merge를 완료한다.
+2.8 리뷰 수행
+- 리뷰어는 file change 버튼을 눌러 master 브랜치와의 소스 차이를 보면서 리뷰어의 의견이 있을 경우 소스 중간에 원하는 자리에 코멘트를 남긴다.
 
-- Github에서 Delete branch 버튼을 클릭하거나 아래 로컬에서 커맨드로 원격 브랜치를 삭제한다.
+![사진 7][git_review]
+
+- 리뷰어는 코멘트나 리뷰 회의를 통해 나온 수정사항을 반영해서 다시 push를 한다.
 ```
+> git commit -a -m "README 파일의 기술 아티클 문구를 기술 블로그로 수정"
+> git push origin dev_standard
+```
+
+2.9 병합(Merge)
+리뷰가 완료되면 병합은 두가지 방법으로 진행할 수 있다. 첫번째는 github 사이트에서 merge를 할 수 있다. 즉,
+
+- 리뷰가 완료되면 Github에서 Merge pull request를 클릭하고 Confirm merge 버튼을 클릭해서 merge를 완료한다.
+- Github에서 Delete branch 버튼을 클릭하거나 아래 로컬에서 커맨드로 원격 브랜치를 삭제한다.
+````
 > git push origin :dev_standard
 ```
 
-2.8 Review 후 수정사항이 있는 경우 수정한 다음 2.7을 재 수행한다.
+혹은, 로컬에서 커맨드로 병합을 완료할 수 있다.
+```
+> git merge --no-ff dev_standard
+```
 
-2.9 로컬 master 동기화
+2.10 로컬 master 동기화
 ```
 > git checkout master && git pull origin master && git fetch -p origin
 ```
@@ -92,6 +108,7 @@ Trello, Github, Slack을 활용한 개발 프로세스
 
 [slack_pullrequest]: http://www.mimul.com/pebble/default/images/blog/Projects/slack_pullrequest.png
 [create_pullrequest]: http://www.mimul.com/pebble/default/images/blog/Projects/create_pullrequest.png
+[git_review]: http://www.mimul.com/pebble/default/images/blog/Projects/git_review.png
 
 #### 3. 배포하기
 - 테스트 코드를 돌리고, jenkins나 자체 배포 도구를 활용하여 운영 서버에 소스를 배포한다.
