@@ -17,7 +17,7 @@ Trello, Github, Slack을 활용한 개발 프로세스
 	![사진 2][trello]
 
 
-1.2 Trello 카드 내용은 Description란에는 이슈 링크를 걸어주거나 wiki 링크를 걸어줘, 해당 스토리의 정보를 알 수 있도록 해준다. 그리고 Spec을 참조하여 Checklist를 추가해 완료조건을 기술해 개발해가면서 하나씩 처리해 나간다.
+1.2 Trello 카드 내용은 Description란에는 이슈 링크를 걸어주거나 Wiki 링크를 걸어줘, 해당 스토리의 정보를 알 수 있도록 해준다. 그리고 Spec을 참조하여 Checklist를 추가해 완료조건을 기술해 개발해가면서 하나씩 처리해 나간다.
 
 ![사진 3][trello_card]
 
@@ -41,7 +41,7 @@ Trello, Github, Slack을 활용한 개발 프로세스
 2.3 작업 후 커밋
 ```
 > git commit -a -m "[VOY-201] README git 사용법 추가"
-# 커밋 작성은 issue ID를 넣고 내용은 구체적으로 제시한다.
+# 커밋 작성은 Issue ID를 넣고 내용은 구체적으로 제시한다.
 ```
 2.4 작업을 완료 후 master branch로 변경하여 remote에 새로운 변경 사항을 master에 반영
 ```
@@ -66,7 +66,7 @@ Trello, Github, Slack을 활용한 개발 프로세스
 ```
 > git push origin dev_standard
 ```
-- push 후 Github의 repository로 이동해서 Compare & pull request 버튼 클릭하고, 코멘트[To close VOY-201(jira issue 번호), 혹은 github issue 사용하면 #1234로] 남기고 Create pull request 버튼 클릭한다.
+- Push 후 Github의 Repository로 이동해서 Compare & pull request 버튼 클릭하고, 코멘트[To close VOY-201(Jira Issue 번호), 혹은 Github Issue 사용하면 #1234로] 남기고 Create pull request 버튼 클릭한다.
 
 	![사진 5][create_pullrequest]
 
@@ -90,22 +90,22 @@ Trello, Github, Slack을 활용한 개발 프로세스
 	![사진 8][git_push]
 
 2.9 병합(Merge)
-- 리뷰가 완료되면 병합은 두가지 방법으로 진행할 수 있다. 첫번째 방법은 리뷰가 완료되면 Github에서 Merge pull request를 클릭하고 Confirm merge 버튼을 클릭해서 merge를 완료할 수 있다.
+- 리뷰가 완료되면 병합은 두가지 방법으로 진행할 수 있다. 첫번째 방법은 리뷰가 완료되면 Github에서 Merge Pull Request를 클릭하고 Confirm merge 버튼을 클릭해서 Merge를 완료할 수 있다.
 - 두번째 방법은 로컬에서 커맨드로 병합을 완료할 수 있다.
 ```
 > git checkout master
 > git merge --no-ff dev_standard
 ```
-- 머지가 완료되고 해당 Pull Request가 close 된 것을 확인할 수 있다.
+- Merge가 완료되고 해당 Pull Request가 Close 된 것을 확인할 수 있다.
 
 	![사진 9][git_merged]
 
-- Github에서 Delete branch 버튼을 클릭하거나 아래 로컬에서 커맨드로 원격 브랜치를 삭제한다.
+- Github에서 Delete Branch 버튼을 클릭하거나 아래 로컬에서 커맨드로 원격 브랜치를 삭제한다.
 ````
 > git push origin :dev_standard
 ```
 
-2.10 로컬 master 동기화 및 로컬 브랜치 삭제
+2.10 로컬 Master 동기화 및 로컬 브랜치 삭제
 - 로컬 master 동기화
 ```
 > git checkout master && git pull origin master && git fetch -p origin
@@ -122,14 +122,14 @@ Trello, Github, Slack을 활용한 개발 프로세스
 [git_merged]: http://www.mimul.com/pebble/default/images/blog/Projects/git_merged.png
 
 #### 3. 배포하기
-- 테스트 코드를 돌리고, jenkins나 자체 배포 도구를 활용하여 운영 서버에 소스를 배포한다.
+- 테스트 코드를 돌리고, Jenkins나 자체 배포 도구를 활용하여 운영 서버에 소스를 배포한다.
 
 #### 4. 배포후 확인
 - 기능 테스트를 눈으로 확인하면서 화면의 깨짐, 데이터의 정확성, 브라우저 호환성 등을 점검한다.
 - Selenium 도구를 통해 브라우저단에서 테스트를 할 수 있는데, 이 Selenium이 구동한 브라우저의 결과 화면을 아이컨텍해 봄으로써 어느 정도 테스트 자동화를 할 수 있다.
 
 #### 5. Trello 카드 Done 리스트로 이동
-- 배포후 확인에서 이상이 없다면, Trello의 카드를 [Done(Sprint1 - 날짜기간)] 리스트에 이동시키고, 이슈를 close한다.
+- 배포후 확인에서 이상이 없다면, Trello의 카드를 [Done(Sprint1 - 날짜기간)] 리스트에 이동시키고, 이슈를 Close한다.
 
 License
 ---------------
