@@ -1,6 +1,6 @@
 Mac 개발환경 구축 - git
 ======================
-(주)Wiseeco에서 Mac으로 개발에 들어가기전 셋팅에 필요한 git 개발 환경을 위한 최소한의 설정을 기술하며, 아래 기술한 내용들을 무조건 따라야하는 것은 아니고 처음 git을 접했을때 헤매지 않도록 하기 위한 최소한의 장치라고 생각하자.
+(주)Wiseeco에서 Mac으로 개발에 들어가기전 필요한 git 개발을 위한 최소한의 설정을 기술하며, 아래 기술한 내용들을 무조건 따라야하는 것은 아니고 처음 git을 접했을때 헤매지 않도록 하기 위한 최소한의 장치라고 생각하자.
 
 git 설치
 ---
@@ -34,8 +34,11 @@ git을 사용하는데 필요한 설정 정보를 기술한다.
 #### 2. alias 설명
 
  - git lg는 과거 로그 이력을 보여줌.
+ ![사진 3][git_lg]
  - git dlg는 과거 좀 더 디테일한 로그를 보여주어 변경 사항을 확인해서 리뷰에 도움을 줌.
+ ![사진 1][git_dlg]
  - git mlg는 머지된 로그만 보여줌.
+ ![사진 2][git_mlg]
  - git sync는 현재 master를 최신 상태로 한 후 branch를 삭제함. branch를 삭제하기에 유의해야 함.
 
 #### 3. 커밋 로그 포멧 설명
@@ -91,3 +94,7 @@ node_modules/
 src/main/resources/rebel.xml
 > git config --global core.excludesfile ~/.gitignore
 ```
+
+[git_dlg]: http://www.mimul.com/pebble/default/images/blog/Projects/git_dlg.png
+[git_mlg]: http://www.mimul.com/pebble/default/images/blog/Projects/git_mlg.png
+[git_lg]: http://www.mimul.com/pebble/default/images/blog/Projects/git_lg.png
