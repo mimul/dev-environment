@@ -20,6 +20,55 @@
 		}
 	}
 ```
+
+### 리스트
+
+* Lists must be preceded by a blank line (or block element)
+* Unordered lists start each item with a `*`
+- `-` 간격이 조금 벌러진다.
+	* indent 중첩 리스트.
+		1. 순서 리스트.
+		2. `1. ` 방식으로 숫자를 넣고 문단의 시작하면 된다.
+		42. `42`를 써도 순서에 의해 3이 보여진다.
+		1. So you might want to start each line with `1.` and let me sort it out
+
+### 인용
+
+> Angle brackets `>`이 인용에 사용된다.
+단락사이가 공백이 아니면 `>`를 앞에 붙일 필요는 없다.
+> Looks kinda ugly though.
+> > 중첩 인용.
+> > > 한번더 중첩.
+>
+> 인용문 안에서도 마크다운 문법이 적용된다.
+>
+> * 리스트.
+> * [Links][arbitrary_id]
+> * Etc.
+
+[arbitrary_id]: http://mimul.com "Title"
+
+### TeX-like Math Syntax
+I can also render TeX-like math syntaxes, if you allow me to.[^math] I can do inline math like this: \\( 1 + 1 \\) or this (in MathML): <math><mn>1</mn><mo>+</mo><mn>1</mn></math>, and block math:
+
+\\[
+    A^T_S = B
+\\]
+
+or (in MathML)
+
+<math display="block">
+    <msubsup><mi>A</mi> <mi>S</mi> <mi>T</mi></msubsup>
+    <mo>=</mo>
+    <mi>B</mi>
+</math>
+
+### Task List Syntax
+1. [x] I can render checkbox list syntax
+	* [x] I support nesting
+	* [x] I support ordered *and* unordered lists
+2. [ ] I don't support clicking checkboxes directly in the html window
+
 매개 변수 설명
 ---------------
 ```java
