@@ -87,7 +87,7 @@ $ cat ~/.ssh/id_rsa.pub C : "cat ~/.ssh/id_rsa.pub | pbcopy"와 동일한 명령
 
 필요한 앱 설치
 ---------------
-맵에서 필요한 앱 설치는 [이곳][mac_apps]을 참고하여 설치 및 셋팅을 진행하면 된다.
+맥에서 필요한 앱 설치는 [이곳][mac_apps]을 참고하여 설치 및 셋팅을 진행하면 된다.
 
 [homebrew]: https://github.com/mimul/dev-environment/blob/master/mac-homebrew.md
 [mac_git]: https://github.com/mimul/dev-environment/blob/master/mac-git.md
