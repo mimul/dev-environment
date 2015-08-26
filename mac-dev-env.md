@@ -4,19 +4,19 @@ Mac 개발 환경 구축 가이드
 Homebrew 설치
 ---------------
 - Java, Command Line Tools은 기본적으로 설치되었다고 가정한다.
-```
-$ ruby -e "$ (curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
-$ brew doctor # 문제 진단을 해줌.
-$ brew update # 최신버전 업데이트.
-```
+    ```
+    $ ruby -e "$ (curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+    $ brew doctor # 문제 진단을 해줌.
+    $ brew update # 최신버전 업데이트.
+    ```
 - 참조 문서 : [Homebrew에 설치 및 사용법(상세)][homebrew]
 
 Git 설치
 ---------------
 - 기본 설치
-```
-$ brew install git
-```
+    ```
+    $ brew install git
+    ```
 
 - 참조 문서 : [Git 설치, 설정, 사용법(상세)][mac_git]
 
@@ -38,21 +38,22 @@ $ chsh -s /bin/zsh # zsh 설정
 - *기본 구성*
 	* 상태바에는 접속 wifi, 배터리, 날짜 정보가 보임.
 - *커맨드*
-```
-$ tmux ls : 기존 세션 확인.
-$ tmux -a : 기존 세션 붙기
-$ tmux list-window : tmux로 열린 세션 보기
-```
+    ```
+    $ tmux ls : 기존 세션 확인.
+    $ tmux -a : 기존 세션 붙기
+    $ tmux list-window : tmux로 열린 세션 보기
+    ```
 
 - *화면 창 조작*
-```
-$ control + t + h : active pane 이동(오른쪽).
-$ control + t + l : active pane 이동(왼).
-$ control + t + | : pane 수직 분할.
-$ control + t + - : pane 수평 분할.
-$ control + t + o : pane 순서대로 로테이트.
-$ control + t + q : pane 죽임.
-```
+    ```
+    - control + t + h : active pane 이동(오른쪽).
+    - control + t + l : active pane 이동(왼).
+    - control + t + | : pane 수직 분할.
+    - control + t + - : pane 수평 분할.
+    - control + t + o : pane 순서대로 로테이트.
+    - control + t + q : pane 죽임.
+    ```
+
 - *Copy Mode*
 	* 복사/붙여넣기
 	control + t + v 하면 Copy Mode로 바뀐다. 이것으로 버퍼에 문자열을 카피할 수도 있고,
