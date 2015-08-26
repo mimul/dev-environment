@@ -9,6 +9,7 @@ Homebrew 설치
     $ brew doctor # 문제 진단을 해줌.
     $ brew update # 최신버전 업데이트.
     ```
+
 - 참조 문서 : [Homebrew에 설치 및 사용법(상세)][homebrew]
 
 Git 설치
