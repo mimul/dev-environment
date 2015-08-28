@@ -4,8 +4,8 @@ StartUp 소프트웨어 개발 조직이 갖추어야 할 문화
 ---------------
 이 문서들은 개발에 필요한 최소한의 이해를 돕고자 하는 것이지 개발에 전부라고 생각하지 않으며, 수동적 추종자가 아닌 창의적 능동자가 되길 빌며, 다양한 케이스들을 탐구해서 해당 문서를 개선해주고, 필요한 문서들이 있다면 자유롭게 추가해 주세요.
 
-- 개발 환경 가이드(Comming soon) : 좋은 개발 도구와 더불어 신규 프로젝트, 신규 입사자에게 필요한 설정 정보들, 필요한 어플, 그리고 그 어플들의 사용 방법, 단축키 등 개발 환경에 필요한 가이드를 제공해 불필요한 비용을 줄인다.
- - [맥 개발환경 구축 가이드](https://github.com/mimul/dev-environment/blob/master/mac-dev-env.md)
+- 개발 환경 가이드 : 좋은 개발 도구와 더불어 신규 프로젝트, 신규 입사자에게 필요한 설정 정보들, 필요한 어플, 그리고 그 어플들의 사용 방법, 단축키 등 개발 환경에 필요한 가이드를 제공해 불필요한 비용을 줄인다.
+ - [Mac에서 개발환경 구축 가이드][dev_guide]
  - [Mac에서 git 환경](https://github.com/mimul/dev-environment/blob/master/mac-git.md)
 - [개발 프로세스 가이드](https://github.com/mimul/dev-environment/blob/master/dev-process.md) : 최신 드랜드를 반영한 최소한의 개발 프로세스에 대한 가이드를 제공한다.(Trello + Github + Slack)
 - 리팩토링 가이드(Comming soon) : 좋은 코드를 작성하기 위한 몇가지 지침을 제공한다.
@@ -84,3 +84,4 @@ StartUp 소프트웨어 개발 조직이 갖추어야 할 문화
 2. [작지만 강한 팀 꾸리기](http://www.mimul.com/pebble/default/2011/01/31/1296401014320.html)
 3. [조직의 생산성을 올리려면](http://www.mimul.com/pebble/default/2015/04/30/1430380681414.html)
 
+[dev_guide]: https://github.com/mimul/dev-environment/blob/master/mac-dev-env.md
