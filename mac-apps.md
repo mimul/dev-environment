@@ -6,7 +6,7 @@ Mac 기본 앱 자동 설치
 ---------------
 [getmacapps][getmacapps]에서 설치할 기본앱들을 설정하고 자동 설치 URL 받아서 맥에서 자동 설치한다. 필요한 앱은 `Chrome, Firefox, Dropbox(Spec 등의 문서 저장 및 공유 도구로 활용), Evernote(개발 등의 메모장으로 활용), FileZilla, Sublime Text 2, iterm2, Alfred` 들을 선택하고 `install these!`를 클릭하면 아래 커맨드를 알려준다. 이 커맨드를 맥에서 실행하면 자동으로 선택된 앱들이 설치된다.
 ```
-curl -s http://www.getmacapps.com/raw/d | sh
+$ curl -s http://www.getmacapps.com/raw/d | sh
 ```
 
 추가 앱 설치
