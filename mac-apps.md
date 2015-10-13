@@ -113,34 +113,34 @@ Edit Configuration에서 Add New Configuration클릭한 다음 Tomcat Server>Loc
     ```
 
 - Tomcat VM Option
-```
--Dfile.encoding=UTF-8 -Xms1024m -Xmx1024m -XX:PermSize=64m -XX:MaxPermSize=256m
-```
+    ```
+    -Dfile.encoding=UTF-8 -Xms1024m -Xmx1024m -XX:PermSize=64m -XX:MaxPermSize=256m
+    ```
 
 - 단축키 정보
     ```
-    - shift + command + 방향키 : 현재 커서에서 라인끝까지 블럭
-    - command + D : 현재 커서의 라인을 복사해서 다음라인에 paste
-    - command + O : 원하는 클래스 검색
-    - shift + command + O : 원하는 파일 검색
-    - command + L : 원하는 라인으로 이동
-    - command + F : 현재 파일에서 검색
-    - shfit + command + F : 프로젝트 전체 파일내 검색
-    - option + command + L : code formatting
-    - command + R : 해당 파일에서 문자열 교체
-    - shift + command + R : 프로젝트내의 전체 파일의 해당 문자열 교체
-    - command + ; : 해당 프로젝트 설정 창으로 이동
-    - command + , : Preferences창 이동
-    - command + / : 해당 라인 주석처리, 블럭 설정시 해당 블럭 주석, 한번더 실행하면 주석 해제
-    - option + command + T : for, if 등 문구 자동 추가
-    - control + shift + R : 해당 클래스 실행
-    - control + tab : 탭간의 이동
-    - command + W : 현재탭 닫기
-    - control + option + O : 불필요한 import 정리
-    - option + Enter : auto import
-    - alt + command + 1 : 수직 분할
-    - Goto Next Splitter : alt + tab
-    - Goto Next Splitter : alt+ shift + tab
+    . shift + command + 방향키 : 현재 커서에서 라인끝까지 블럭
+    . command + D : 현재 커서의 라인을 복사해서 다음라인에 paste
+    . command + O : 원하는 클래스 검색
+    . shift + command + O : 원하는 파일 검색
+    . command + L : 원하는 라인으로 이동
+    . command + F : 현재 파일에서 검색
+    . shfit + command + F : 프로젝트 전체 파일내 검색
+    . option + command + L : code formatting
+    . command + R : 해당 파일에서 문자열 교체
+    . shift + command + R : 프로젝트내의 전체 파일의 해당 문자열 교체
+    . command + ; : 해당 프로젝트 설정 창으로 이동
+    . command + , : Preferences창 이동
+    . command + / : 해당 라인 주석처리, 블럭 설정시 해당 블럭 주석, 한번더 실행하면 주석 해제
+    . option + command + T : for, if 등 문구 자동 추가
+    . control + shift + R : 해당 클래스 실행
+    . control + tab : 탭간의 이동
+    . command + W : 현재탭 닫기
+    . control + option + O : 불필요한 import 정리
+    . option + Enter : auto import
+    . alt + command + 1 : 수직 분할
+    . Goto Next Splitter : alt + tab
+    . Goto Next Splitter : alt+ shift + tab
     ```
 
 [getmacapps]: http://www.getmacapps.com
