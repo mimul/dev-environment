@@ -30,6 +30,10 @@ git을 사용하는데 필요한 설정 정보를 기술한다.
     dlg = log --stat --decorate=full --pretty=format:'%C(yellow)%h %C(green)%cr %C(blue)%cn%Creset %C(red reverse)%d%Creset %Creset%s %C(cyan)%b'
     mlg = log --merges --pretty=format:'%C(yellow)%h %Cgreen%ci %Cblue%cn%Creset %C(red reverse)%d%Creset %Creset%s %C(cyan)%b'
     sync = !git checkout master && git pull origin master && git fetch -p origin && git branch -d $(git branch --merged | grep -v master | grep -v '*')
+[pager]
+    log = diff-highlight  | less -R
+    show = diff-highlight | less -R
+    diff = diff-highlight | less -R
 ```
 #### 2. alias 설명
 
@@ -75,7 +79,12 @@ git을 사용하는데 필요한 설정 정보를 기술한다.
 --date:raw : %s %z
 --date:default : 표준
 ```
-#### 4. gitignore 설정
+
+#### 4. pager 설명
+diff-highlight 행수준 diff 뿐만 아니라, 단어 수준에서의 diff도 강조되고, GitHub의 diff처럼 보여준다.
+ ![사진 4][git_pager]
+
+#### 5. gitignore 설정
 git 관리에서 제외할 대상들을 기술한다.
 ```
 > vi ~/.gitignore
@@ -98,3 +107,4 @@ src/main/resources/rebel.xml
 [git_dlg]: http://www.mimul.com/pebble/default/images/blog/Projects/git_dlg.png
 [git_mlg]: http://www.mimul.com/pebble/default/images/blog/Projects/git_mlg.png
 [git_lg]: http://www.mimul.com/pebble/default/images/blog/Projects/git_lg.png
+[git_pager]: http://www.mimul.com/pebble/default/images/blog/tech/git_pager.png

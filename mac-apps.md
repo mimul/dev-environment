@@ -80,6 +80,14 @@ Edit Configuration에서 Add New Configuration클릭한 다음 Tomcat Server>Loc
 - 자동 저장
  General>Syncronization
 
+- Auto Import
+Preference>Editor>General>Auto Import
+Optimize imports on the fly : checked
+Add unambiguous imports on the fly : checked
+Editor>Code Style>Java>Import
+Class count to use import with '*' : 7
+Names count to use static import with '*' : 5
+
 - Boilerplate Code 회피
  Plugins>Browse Repositories>Lombok
 

@@ -35,6 +35,15 @@ $ chsh -s /bin/zsh # zsh 설정
 
 ![사진 1][mac_terminal]
 
+커맨드라인 정보는 아래와 같다.
+```
+. [mimul.local]% : Mac 호스트 정보.
+. (master *+$|MERGING<>) : git merge중에 충돌났을 경우 표시.
+. (master $>3) : git push가 필요하며 commit한 수가 3개라는 표시.
+. (master=) : git push 후 상태 표시.
+. [~/Projects/2015/dotfiles] : 현재 디렉토리 경로.
+```
+
 ### 1. Tmux 단축키 정보
 - *기본 구성*
 	* 상태바에는 접속 wifi, 배터리, 날짜 정보가 보임.
