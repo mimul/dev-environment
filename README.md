@@ -9,7 +9,9 @@ StartUp 소프트웨어 개발 조직이 갖추어야 할 문화
  - [Mac에서 git 환경](https://github.com/mimul/dev-environment/blob/master/mac-git.md)
 - [개발 프로세스 가이드](https://github.com/mimul/dev-environment/blob/master/dev-process.md): 최신 드랜드를 반영한 최소한의 개발 프로세스에 대한 가이드를 제공한다.(Trello + Github + Slack)
 - [코드 리뷰](https://github.com/mimul/dev-environment/blob/master/code-review.md) : 코드 리뷰에 필요한 정보들을 정리해 제공한다.
-- 리팩토링 가이드(Comming soon) : 좋은 코드를 작성하기 위한 몇가지 지침을 제공한다.
+- 코드 개선
+ - [정적 분석](https://github.com/wiseeco/dev-environment/blob/master/static-analysis.md)
+ - 리팩토링 가이드(Comming soon) : 좋은 코드를 작성하기 위한 몇가지 지침을 제공한다.
 - [Markdown Template](https://github.com/mimul/dev-environment/blob/master/markdown-template.md) : 필요한 Markdown 문법 등 사용 가이드 제공해 활용도를 높여준다.
 - 기술 블로그(Comming soon)
 
