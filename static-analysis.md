@@ -229,5 +229,5 @@ no-unused-vars : 선언했지만, 사용되지 않은 변수를 경고.
 no-mixed-spaces-and-tabs : 공백과 탭이 혼재하고 있는 경우에 경고.
 ```
 
-[wiseeco-checkstyle]: https://github.com/wiseeco/dev-culture/blob/master/wiseeco-checkstyle.xml
-[findbugs-exclude-filter]: https://github.com/wiseeco/dev-culture/blob/master/findbugs-exclude-filter.xml
+[wiseeco-checkstyle]: https://github.com/mimul/dev-environment/blob/master/build-config/checkstyle/wiseeco-checks.xml
+[findbugs-exclude-filter]: https://github.com/mimul/dev-environment/blob/master/build-config/findbugs/findbugs-exclude-filter.xml
