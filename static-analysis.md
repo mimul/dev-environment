@@ -15,7 +15,7 @@ Checkstyle
 
 ###설정
 
-[wiseeco-checkstyle.xml][wiseeco-checkstyle] 파일을 프로젝트 ROOT에 다운로드한 다음, Checkstyle-IDE 플러그인은 로딩 이슈가 있어서 설치를 제외하고, pom.xml에 아래 사항을 기술해 준다.
+[wiseeco-checkstyle.xml](https://github.com/mimul/dev-environment/blob/master/build-config/checkstyle/wiseeco-checks.xml) 파일을 프로젝트 ROOT에 다운로드한 다음, Checkstyle-IDE 플러그인은 로딩 이슈가 있어서 설치를 제외하고, pom.xml에 아래 사항을 기술해 준다.
 ```
 <plugin>
     <groupId>org.apache.maven.plugins</groupId>
@@ -78,7 +78,7 @@ FindBugs
 알려진 버그 패턴에 따라 잠재적 버그를 검사해 알려준다.
 
 ###설정
-[findbugs-exclude-filter.xml][findbugs-exclude-filter] 파일을 프로젝트 ROOT에 다운로드한 다음, pom.xml에 아래 사항을 기술해 준다.
+[findbugs-exclude-filter.xml](https://github.com/mimul/dev-environment/blob/master/build-config/findbugs/findbugs-exclude-filter.xml) 파일을 프로젝트 ROOT에 다운로드한 다음, pom.xml에 아래 사항을 기술해 준다.
 ```
 <plugin>
     <groupId>org.codehaus.mojo</groupId>
@@ -228,6 +228,3 @@ Javascript의 알려진 버그들을 알려준다.
     ```
     no-mixed-spaces-and-tabs : 공백과 탭이 혼재하고 있는 경우에 경고.
     ```
-
-[wiseeco-checkstyle]: https://github.com/mimul/dev-environment/blob/master/build-config/checkstyle/wiseeco-checks.xml
-[findbugs-exclude-filter]: https://github.com/mimul/dev-environment/blob/master/build-config/findbugs/findbugs-exclude-filter.xml
