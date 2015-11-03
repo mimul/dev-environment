@@ -15,7 +15,7 @@ Checkstyle
 
 ###설정
 
-[wiseeco-checkstyle.xml](https://github.com/mimul/dev-environment/blob/master/build-config/checkstyle/wiseeco-checks.xml) 파일을 프로젝트 ROOT에 다운로드한 다음, Checkstyle-IDE 플러그인은 로딩 이슈가 있어서 설치를 제외하고, pom.xml에 아래 사항을 기술해 준다.
+[wiseeco-checkstyle.xml](https://github.com/mimul/dev-environment/blob/master/build-config/checkstyle/wiseeco-checks.xml) 파일을 프로젝트 ROOT에 다운로드한 다음, pom.xml에 아래 사항을 기술해 준다.
 ```
 <plugin>
     <groupId>org.apache.maven.plugins</groupId>
