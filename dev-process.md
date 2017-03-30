@@ -101,9 +101,11 @@ Trello, Github, Slack을 활용한 개발 프로세스
 	![사진 9][git_merged]
 
 - Github에서 Delete Branch 버튼을 클릭하거나 아래 로컬에서 커맨드로 원격 브랜치를 삭제한다.
-````
+
+```
 > git push origin :dev_standard
 ```
+
 
 2.10 로컬 Master 동기화 및 로컬 브랜치 삭제
 - 로컬 master 동기화
