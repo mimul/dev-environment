@@ -104,6 +104,19 @@ src/main/resources/rebel.xml
 > git config --global core.excludesfile ~/.gitignore
 ```
 
+#### 6. 커밋 메세지
+커밋 메세지는 가독성, 개발한 내용을 잘 이해하도록 메세지를 작성해야 한다. 메세지 내용엔 주로 어떻게보다 무엇을, 왜에 초점을 맞추어 작성하고, 내용 앞에 아래의 프리픽스 추가해서 커밋 메세지의 이해도를 높이자.
+
+ - 프리픽스 정의(추후 의견을 통해 추가될 수 있음).
+```
+feat: 새로운 기능 추가일 경우
+fix: 버그 고친 경우
+docs: 문서작성 및 갱신의 경우
+style: 코드 포멧 변경의 경우
+refactor: 리팩토링의 경우
+perf: 성능 개선의 경우
+test: 테스트 코드 추가 및 변경의 경우
+```
 [git_dlg]: http://www.mimul.com/pebble/default/images/blog/Projects/git_dlg.png
 [git_mlg]: http://www.mimul.com/pebble/default/images/blog/Projects/git_mlg.png
 [git_lg]: http://www.mimul.com/pebble/default/images/blog/Projects/git_lg.png

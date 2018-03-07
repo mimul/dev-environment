@@ -17,7 +17,6 @@
         <!-- Check for Coding. -->
         <!-- See http://checkstyle.sourceforge.net/config_coding.html -->
         <module name="EmptyStatement" />
-        <module name="HiddenField"/>
         <module name="IllegalInstantiation"/>
         <module name="ModifiedControlVariable"/>
         <module name="SimplifyBooleanExpression"/>
