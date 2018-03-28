@@ -85,8 +85,8 @@ Preference>Editor>General>Auto Import
 Optimize imports on the fly : checked
 Add unambiguous imports on the fly : checked
 Editor>Code Style>Java>Import
-Class count to use import with '*' : 7
-Names count to use static import with '*' : 5
+Class count to use import with '*' : 100
+Names count to use static import with '*' : 100
 
 - Boilerplate Code 회피
  Plugins>Browse Repositories>Lombok
@@ -103,7 +103,7 @@ Names count to use static import with '*' : 5
     ```
     $ vi /Applications/IntelliJ IDEA 14.app/Contents/Info.plist
     <key>JVMVersion</key>
-    <string>1.7*</string>
+    <string>1.8*</string>
     ```
 
 - idea.vmoptions 설정
