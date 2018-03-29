@@ -1,6 +1,8 @@
 리팩토링에 필요한 것들.
 ======================
 리팩토링은 코드의 가독성 증대, 버그 감소, 확장성 고려 뿐만 아니라, 성능에도 영향을 줄 수 있는 중요한 행위입니다.
+> 어떤 프로그래머도 컴퓨터에 이해할 수있는 코드를 쓸 수있다. 그러나 우수한 프로그래머 만이 인간을 이해할 수있는 코드를 작성할 수있다.
+> From Martin Fowler
 
 리팩토링의 기준점들
 ---
@@ -14,14 +16,16 @@
 - AOP를 통해 종적 관심사와 횡적 관심사의 분리.
 - 높은 응집도, 낮은 결함도
 - 중복 최소화(Don't Repeat Yourself)
-- 개방 폐쇄 원칙(Open-Closed Principal) : 소프트웨어 구성요소들(클래스, 함수, 모듈)은 확장은 가능하게 수정은 불가능하게.
+- 개방 폐쇄 원칙(Open-Closed Principal) : 소프트웨어 구성 요소들(클래스, 함수, 모듈)은 확장은 가능하게 수정은 불가능하게.
+- 리팩토링을 시작하기 전과 후에는 단위 테스트를 실행 코드의 기능을 변경하지 않았는지 확인한다.
+- 작은 리팩토링과 테스트의 조합을 반복한다. 큰 리팩토링은 하지 않는다.
 
 리팩토링을 해야할 시점
 ---
-- 유사한 처리를 3 회 쓰게되면 리팩토링 <- 중복 최소화(DRY)
-- 기능을 추가할 때
-- 버그를 수정할 때
-- 코드를 리뷰하고 난 다음
+- 유사한 처리를 3 회 쓰게되면 리팩토링. <- 중복 최소화(DRY)
+- 기능을 추가할 때.
+- 버그를 수정할 때.
+- 코드를 리뷰하고 난 다음.
 
 네이밍
 ---
@@ -136,8 +140,34 @@ private void appendMark(StringBuilder s, int i, int j) {
     }
 }
 ```
+#### 3. 변수 추출
+- 복잡한 수식인 경우 목적을 나타내는 이름으로 임시변수에 할당해 가독성을 높인다.
+```
+if ((platform.tuUpperCase().indexOf("MAC") > -1) && (browser.toUpperCase().indexOf( "IE") > -1) {
+    // do something
+}
+임시 로컬 변수
+final boolean isMacOs = platform.tuUpperCase().indexOf( "MAC") > -1;
+final boolean isIEBrowser = browser.toUpperCase().indexOf( "IE") > -1;
+if (isMacOs && isIEBrowser) {
+    // do something
+}
+```
+- 불필요한 임시 변수 제거
+```
+@Override
+public List<User> getUsersByCompanyId(Long companyId, User user) {
+  List<User> users = userRepository.getUsersByCompanyIdRole(User.builder().companyId(companyId).userType(1).build());
+  return users;
+}
+불필요한 임시 변수 제거
+@Override
+public List<User> getUsersByCompanyId(Long companyId, User user) {
+  return userRepository.getUsersByCompanyIdRole(User.builder().companyId(companyId).userType(1).build());
+}
+```
 
-#### 3. 가독성 있는 if
+#### 4. 가독성 있는 if
 - 비교 대상을 왼쪽에 배치
 ```
 if (age >= 10) {} <- 비교 대상을 왼쪽에 배치
@@ -167,8 +197,18 @@ public String getGrade(int score) {
 ```
 return foo == bar;
 ```
+- NULL 체크 if문 제거
+```
+if (signup.getCompanyId() == null) {
+  signup.setCompanyId(user.getCompanyId());
+}
+Optional 활용
+signup.setCompanyId(Optional.ofNullable(signup.getCompanyId()).orElse(user.getCompanyId()));
+org.apache.commons.lang.StringUtils.ObjectUtils 활용
+signup.setCompanyId(ObjectUtils.defaultIfNull(signup.getCompanyId(), user.getCompanyId()))
+```
 
-#### 4. else문 없애기: 조건문이 중첩되어 았으면 코드 이해하기도 어렵고 스크롤 압박까지 있다면 가독성이 떨어지게되고 그러면 버그를 만들 확률을 높일 수 있다. 그래서 조기 반환 기법과 전력 패턴을 사용하면 해결할 수 있다.
+#### 5. else문 없애기: 조건문이 중첩되어 았으면 코드 이해하기도 어렵고 스크롤 압박까지 있다면 가독성이 떨어지게되고 그러면 버그를 만들 확률을 높일 수 있다. 그래서 조기 반환 기법과 전력 패턴을 사용하면 해결할 수 있다.
 - 조기 반환
 ```
 public String getGrade(int score) {
@@ -244,7 +284,7 @@ public class Subtract implements Type {
     }
 }
 ```
-#### 5. Boilerplate Code를 줄이기
+#### 6. Boilerplate Code를 줄이기
 - 컴퓨터 프로그래밍에서 상용구 코드 또는 상용구는 수정하지 않거나 최소한의 수정만을 거쳐 여러 곳에 필수적으로 사용되는 코드를 말한다. 이와 같은 코드는 최소한의 작업을 하기 위해 많은 분량의 코드를 작성해야하는 언어에서 자주 사용된다.
 - Lombok 등을 활용해서 불필요한 코드를 줄이자.[주의 사항](http://kwonnam.pe.kr/wiki/java/lombok/pitfall)
 - Lombok @Builder annotation(Builder 패턴)을 활용해 멤버 변수 셋팅해 코드 라인수를 줄이자. 멤버 변수에 Default 초기화가 있을 경우 @Builder.Default를 선언해준다.
@@ -277,7 +317,7 @@ Builder Pattern을 적용했을 경우
 Report report = Report.builder().startDate("20170605").endDate("201706012").dimension("age").measure("average").serviceCode(1).build();
 ```
 
-#### 6. 기타
+#### 7. 기타
 - 정리중....
 - AOP를 통해 종적 관심사와 횡적 관심사의 분리.
 - 높은 응집도, 낮은 결함도
