@@ -286,9 +286,8 @@ public class Subtract implements Type {
 ```
 #### 6. Boilerplate Code를 줄이기
 - 컴퓨터 프로그래밍에서 상용구 코드 또는 상용구는 수정하지 않거나 최소한의 수정만을 거쳐 여러 곳에 필수적으로 사용되는 코드를 말한다. 이와 같은 코드는 최소한의 작업을 하기 위해 많은 분량의 코드를 작성해야하는 언어에서 자주 사용된다.
-- Lombok 등을 활용해서 불필요한 코드를 줄이자.[주의 사항](http://kwonnam.pe.kr/wiki/java/lombok/pitfall)
-- Lombok @Builder annotation(Builder 패턴)을 활용해 멤버 변수 셋팅해 코드 라인수를 줄이자. 멤버 변수에 Default 초기화가 있을 경우 @Builder.Default를 선언해준다.
-
+- Lombok 등을 활용해서 불필요한 코드를 줄이자. [Lombok 주의 사항](http://kwonnam.pe.kr/wiki/java/lombok/pitfall)
+- 멤버변수가 많을 경우 Lombok @Builder annotation(Builder 패턴)을 활용해 멤버 변수 셋팅하자. 멤버 변수에 Default 초기화가 있을 경우 @Builder.Default를 선언해준다.
 ```
 @Getter
 @Setter
@@ -317,7 +316,33 @@ Builder Pattern을 적용했을 경우
 Report report = Report.builder().startDate("20170605").endDate("201706012").dimension("age").measure("average").serviceCode(1).build();
 ```
 
-#### 7. 기타
+#### 7. Spring에서의 활용 방법들
+- Spring Injection은 Constructor Injection을 권한다. 이유는 [Spring에서 Field Injection보다 Constructor Injection이 권장되는 이유. 참조](https://goo.gl/YsE4RY)
+- 참고로 개발 편이성은 좋아질 수 있으나, 의존관계의 복잡성을 명확하게 보여주진 못하게 된다. @RequiredArgsConstructor는 초기화 되지 않은 final 필드를 매개 변수로 취하는 생성자를 생성하고 @NonNull이 필드는 null 체크가 실행되고 파라미터가 null인 경우는 NullPointerException을 발생시킨다.
+  - Spring 4.3 이상인 경우
+  ```
+  @RequiredArgsConstructor
+  @Component
+  public class ConstructorInjection {
+      @NonNull
+      private final LoginService loginService;
+      @NonNull
+      private final SignupService signupService;
+  }
+  ```
+  - Spring 4.3 이전인 경우
+  ```
+  @RequiredArgsConstructor(onConstructor = @__(@Autowired))
+  @Component
+  public class ConstructorInjection {
+      @NonNull
+      private final LoginService loginService;
+      @NonNull
+      private final SignupService signupService;
+  }
+  ```
+
+#### 8. 기타
 - 정리중....
 - AOP를 통해 종적 관심사와 횡적 관심사의 분리.
 - 높은 응집도, 낮은 결함도
