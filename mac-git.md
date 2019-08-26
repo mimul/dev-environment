@@ -1,6 +1,6 @@
 Mac 개발환경 구축 - git
 ======================
-(주)Wiseeco에서 Mac으로 개발에 들어가기전 필요한 git 개발을 위한 최소한의 설정을 기술하며, 아래 기술한 내용들을 무조건 따라야하는 것은 아니고 처음 git을 접했을때 헤매지 않도록 하기 위한 최소한의 장치라고 생각하자.
+Mac으로 개발에 들어가기전 필요한 git 개발을 위한 최소한의 설정을 기술하며, 아래 기술한 내용들을 무조건 따라야하는 것은 아니고 처음 git을 접했을때 헤매지 않도록 하기 위한 최소한의 장치라고 생각하자.
 
 git 설치
 ---
@@ -27,9 +27,15 @@ git을 사용하는데 필요한 설정 정보를 기술한다.
     helper = cache --timeout 3600
 [alias]
     lg = log --graph --date=short --decorate=short --pretty=format:'%C(white)%h%Creset %C(blue)%cn%Creset %C(green)%cd%Creset %C(red reverse)%d%Creset %C(reset)%s' --all
+    ls = !git lg | fzf -m --ansi --layout=reverse --preview=\"echo {} | sed 's/-.*$//' | egrep -o '[0-9a-f]+' | xargs git show --color=always\" | sed 's/-.*$//' | egrep -o '[0-9a-f]+'
     dlg = log --stat --decorate=full --pretty=format:'%C(yellow)%h %C(green)%cr %C(blue)%cn%Creset %C(red reverse)%d%Creset %Creset%s %C(cyan)%b'
     mlg = log --merges --pretty=format:'%C(yellow)%h %Cgreen%ci %Cblue%cn%Creset %C(red reverse)%d%Creset %Creset%s %C(cyan)%b'
     sync = !git checkout master && git pull origin master && git fetch -p origin && git branch -d $(git branch --merged | grep -v master | grep -v '*')
+    co = "!f() { args=$@; if [ -z \"$args\" ]; then branch=$(git branch --all | grep -v HEAD | fzf --preview 'echo {} | cut -c 3- | xargs git log --color --graph' | cut -c 3-); git checkout $(echo $branch | sed 's#remotes/[^/]*/##'); else git checkout $args; fi }; f"
+    di = "!f() { args=$@; [ -z \"$args\" ] && args=HEAD; ([ \"$args\" = \"HEAD\" ] && git status --short || git diff --name-status $args | sed 's/\t/  /') | fzf --preview \"echo {} | cut -c 4- | xargs git diff --color=always $args --\" --multi --height 90% | cut -c 4-; }; f"
+    stl = !git stash list | fzf --preview 'echo {} | cut -d: -f1 | xargs git stash show -p --color=always' --height 90% | cut -d: -f1
+    sta = !git stl | xargs git stash apply
+    std = !git stl | xargs git stash drop
 [pager]
     log = diff-highlight  | less -R
     show = diff-highlight | less -R
@@ -43,7 +49,15 @@ git을 사용하는데 필요한 설정 정보를 기술한다.
  ![사진 1][git_dlg]
  - git mlg는 머지된 로그만 보여줌.
  ![사진 2][git_mlg]
+ - git ls는 커밋 로그를 트리형태로 이쁘게 보여주고 해당 커밋 로그를 선택하면 상세 정보가 보임
+ ![사진 5][git_ls]
  - git sync는 현재 master를 최신 상태로 한 후 branch를 삭제함. branch를 삭제하기에 유의해야 함.
+ - git co는 원격을 포함한 branch 목록에서 선택한 브랜치를 checkout 할 수 있게 함
+ ![사진 6][git_co]
+ - git di는 소스의 차이를 파일마다 전환하면서 확인할 수 있게 해줌
+ ![사진 7][git_di]
+ - git stl은 stash 목록에 변경 내용을 포함하여 확인할 수 있음
+ ![사진 8][git_stl]
 
 #### 3. 커밋 로그 포멧 설명
 3.1 형식 설명
@@ -121,3 +135,7 @@ test: 테스트 코드 추가 및 변경의 경우
 [git_mlg]: http://www.mimul.com/pebble/default/images/blog/Projects/git_mlg.png
 [git_lg]: http://www.mimul.com/pebble/default/images/blog/Projects/git_lg.png
 [git_pager]: http://www.mimul.com/pebble/default/images/blog/tech/git_pager.png
+[git_ls]: http://www.mimul.com/pebble/default/images/git_ls.gif
+[git_co]: http://www.mimul.com/pebble/default/images/git_co.gif
+[git_di]: http://www.mimul.com/pebble/default/images/git_di.gif
+[git_stl]: http://www.mimul.com/pebble/default/images/git_stl.gif
