@@ -53,11 +53,11 @@ git을 사용하는데 필요한 설정 정보를 기술한다.
  ![사진 9][git_ls_resize]
  - git sync는 현재 master를 최신 상태로 한 후 branch를 삭제함. branch를 삭제하기에 유의해야 함.
  - git co는 원격을 포함한 branch 목록에서 선택한 브랜치를 checkout 할 수 있게 함
- ![사진 6][git_co]
+ ![사진 6][git_co_resize]
  - git di는 소스의 차이를 파일마다 전환하면서 확인할 수 있게 해줌
- ![사진 7][git_di]
+ ![사진 7][git_di_resize]
  - git stl은 stash 목록에 변경 내용을 포함하여 확인할 수 있음
- ![사진 8][git_stl]
+ ![사진 8][git_stl_resize]
 
 #### 3. 커밋 로그 포멧 설명
 3.1 형식 설명
@@ -136,6 +136,6 @@ test: 테스트 코드 추가 및 변경의 경우
 [git_lg]: http://www.mimul.com/pebble/default/images/blog/Projects/git_lg.png
 [git_pager]: http://www.mimul.com/pebble/default/images/blog/tech/git_pager.png
 [git_ls_resize]: http://www.mimul.com/pebble/default/images/git_ls_resize.gif
-[git_co]: http://www.mimul.com/pebble/default/images/git_co.gif
-[git_di]: http://www.mimul.com/pebble/default/images/git_di.gif
-[git_stl]: http://www.mimul.com/pebble/default/images/git_stl.gif
+[git_co_resize]: http://www.mimul.com/pebble/default/images/git_co_resize.gif
+[git_di_resize]: http://www.mimul.com/pebble/default/images/git_di_resize.gif
+[git_stl_resize]: http://www.mimul.com/pebble/default/images/git_stl_resize.gif
