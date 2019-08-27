@@ -50,14 +50,14 @@ git을 사용하는데 필요한 설정 정보를 기술한다.
  - git mlg는 머지된 로그만 보여줌.
  ![사진 2][git_mlg]
  - git ls는 커밋 로그를 트리형태로 이쁘게 보여주고 해당 커밋 로그를 선택하면 상세 정보가 보임
- ![사진 9][git_ls_resize]
+ ![사진 5][git_ls_resize]
  - git sync는 현재 master를 최신 상태로 한 후 branch를 삭제함. branch를 삭제하기에 유의해야 함.
  - git co는 원격을 포함한 branch 목록에서 선택한 브랜치를 checkout 할 수 있게 함
  ![사진 6][git_co_resize]
  - git di는 소스의 차이를 파일마다 전환하면서 확인할 수 있게 해줌
  ![사진 7][git_di_resize]
  - git stl은 stash 목록에 변경 내용을 포함하여 확인할 수 있음
- ![사진 8][git_stl_resize]
+ ![사진 8][git_stl_resize1]
 
 #### 3. 커밋 로그 포멧 설명
 3.1 형식 설명
@@ -138,4 +138,4 @@ test: 테스트 코드 추가 및 변경의 경우
 [git_ls_resize]: http://www.mimul.com/pebble/default/images/git_ls_resize.gif
 [git_co_resize]: http://www.mimul.com/pebble/default/images/git_co_resize.gif
 [git_di_resize]: http://www.mimul.com/pebble/default/images/git_di_resize.gif
-[git_stl_resize]: http://www.mimul.com/pebble/default/images/git_stl_resize.gif
+[git_stl_resize1]: http://www.mimul.com/pebble/default/images/git_stl_resize.gif
