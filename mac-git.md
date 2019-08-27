@@ -50,7 +50,7 @@ git을 사용하는데 필요한 설정 정보를 기술한다.
  - git mlg는 머지된 로그만 보여줌.
  ![사진 2][git_mlg]
  - git ls는 커밋 로그를 트리형태로 이쁘게 보여주고 해당 커밋 로그를 선택하면 상세 정보가 보임
- ![사진 9][git_ls1]
+ ![사진 9][git_ls_resize]
  - git sync는 현재 master를 최신 상태로 한 후 branch를 삭제함. branch를 삭제하기에 유의해야 함.
  - git co는 원격을 포함한 branch 목록에서 선택한 브랜치를 checkout 할 수 있게 함
  ![사진 6][git_co]
@@ -135,7 +135,7 @@ test: 테스트 코드 추가 및 변경의 경우
 [git_mlg]: http://www.mimul.com/pebble/default/images/blog/Projects/git_mlg.png
 [git_lg]: http://www.mimul.com/pebble/default/images/blog/Projects/git_lg.png
 [git_pager]: http://www.mimul.com/pebble/default/images/blog/tech/git_pager.png
-[git_ls1]: http://www.mimul.com/pebble/default/images/git_ls1.gif
+[git_ls_resize]: http://www.mimul.com/pebble/default/images/git_ls_resize.gif
 [git_co]: http://www.mimul.com/pebble/default/images/git_co.gif
 [git_di]: http://www.mimul.com/pebble/default/images/git_di.gif
 [git_stl]: http://www.mimul.com/pebble/default/images/git_stl.gif
