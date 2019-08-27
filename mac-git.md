@@ -138,4 +138,4 @@ test: 테스트 코드 추가 및 변경의 경우
 [git_ls_resize]: http://www.mimul.com/pebble/default/images/git_ls_resize.gif
 [git_co_resize]: http://www.mimul.com/pebble/default/images/git_co_resize.gif
 [git_di_resize]: http://www.mimul.com/pebble/default/images/git_di_resize.gif
-[git_stl_resize1]: http://www.mimul.com/pebble/default/images/git_stl_resize.gif
+[git_stl_resize1]: http://www.mimul.com/pebble/default/images/git_stl_resize1.gif
