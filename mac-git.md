@@ -50,7 +50,7 @@ git을 사용하는데 필요한 설정 정보를 기술한다.
  - git mlg는 머지된 로그만 보여줌.
  ![사진 2][git_mlg]
  - git ls는 커밋 로그를 트리형태로 이쁘게 보여주고 해당 커밋 로그를 선택하면 상세 정보가 보임
- ![사진 5][git_ls]
+ ![사진 9][git_ls]
  - git sync는 현재 master를 최신 상태로 한 후 branch를 삭제함. branch를 삭제하기에 유의해야 함.
  - git co는 원격을 포함한 branch 목록에서 선택한 브랜치를 checkout 할 수 있게 함
  ![사진 6][git_co]
