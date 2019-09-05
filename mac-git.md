@@ -42,19 +42,30 @@ git을 사용하는데 필요한 설정 정보를 기술한다.
     diff = diff-highlight | less -R
 ```
 #### 2. alias 설명
-git 단축키 설명
+git 단축키 설명.
  - git lg는 과거 로그 이력을 보여줌.
+
  ![사진 3][git_lg_google]
+ 
  - git dlg는 과거 좀 더 디테일한 로그를 보여주어 변경 사항을 확인해서 리뷰에 도움을 줌.
+
  - git mlg는 머지된 로그만 보여줌.
+
  - git ls는 커밋 로그를 트리형태로 이쁘게 보여주고 해당 커밋 로그를 선택하면 상세 정보가 보임
+
  ![사진 5][git_ls_resize_google]
  - git sync는 현재 master를 최신 상태로 한 후 branch를 삭제함. branch를 삭제하기에 유의해야 함.
+
  - git co는 원격을 포함한 branch 목록에서 선택한 브랜치를 checkout 할 수 있게 함
+
  ![사진 6][git_co_resize_google]
+
  - git di는 소스의 차이를 파일마다 전환하면서 확인할 수 있게 해줌
+
  ![사진 7][git_di_resize_google]
+
  - git stl은 stash 목록에 변경 내용을 포함하여 확인할 수 있음
+
  ![사진 8][git_stl_resize_google]
 
 #### 3. 커밋 로그 포멧 설명
