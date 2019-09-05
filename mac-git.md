@@ -42,7 +42,6 @@ git을 사용하는데 필요한 설정 정보를 기술한다.
     diff = diff-highlight | less -R
 ```
 #### 2. alias 설명
-
  - git lg는 과거 로그 이력을 보여줌.
  ![사진 3][git_lg_google]
  - git dlg는 과거 좀 더 디테일한 로그를 보여주어 변경 사항을 확인해서 리뷰에 도움을 줌.
