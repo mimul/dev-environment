@@ -73,11 +73,13 @@ intellij의 Maven Project탭에서 Plugins아래 checkstyle에서 checkstyle:che
     MethodParamPad : 메소드 정의 부분(호출 부분도 포함)의 공백을 체크.
     ```
 
+
 FindBugs
 ---
 알려진 버그 패턴에 따라 잠재적 버그를 검사해 알려준다.
 
 ###설정
+
 [findbugs-exclude-filter.xml](https://github.com/mimul/dev-environment/blob/master/build-config/findbugs/findbugs-exclude-filter.xml) 파일을 프로젝트 ROOT에 다운로드한 다음, pom.xml에 아래 사항을 기술해 준다.
 ```
 <plugin>
