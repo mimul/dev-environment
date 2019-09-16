@@ -54,7 +54,7 @@ intellij의 Maven Project탭에서 Plugins아래 checkstyle에서 checkstyle:che
     IllegalImport : import하면 안되는 패키지 체크.
     RedundantImport : 중복 import 문을 체크.
     UnusedImports : 프로그램에서 사용되지 않는 import 문을 체크.
-```
+    ```
 
 4. [Naming Conventions](http://checkstyle.sf.net/config_naming.htm)
     ```
