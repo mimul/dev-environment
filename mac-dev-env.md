@@ -1,6 +1,33 @@
 Mac 개발 환경 구축 가이드
 ======================
 
+시스템 환경 설정
+---------------
+
+- 숨겨진 파일 표시
+```
+> defaults write com.apple.finder AppleShowAllFiles -boolean true
+# 특정 디렉토리에서 ls 커맨드
+> ls -f
+# Finder에서는 shift +command + . 키를 누름
+```
+
+- 공유 폴더에 .DS_Store 파일을 만들지 않음
+```
+> defaults write com.apple.desktopservices DSDontWriteNetworkStores true
+```
+
+- 화면모드 > 스크롤 막대 보기 > 항상 선택
+- 마우스 : 이동속도, 스크롤 속도 빠르게 변경(디폴트는 느리게 되어 있음)
+
+- 네트워크 > DNS > DNS 서버에 아래 두 IP(Google Public DNS) 등록함.
+```
+8.8.8.8
+8.8.4.4
+```
+
+- 방화벽 : 켜기
+
 Homebrew 설치
 ---------------
 - Java, Command Line Tools은 기본적으로 설치되었다고 가정한다.
