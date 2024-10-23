@@ -10,7 +10,22 @@ git 설치
 > git config --global user.name "mimul"
 > git config --global user.email "hahojin@gmail.com"
 > git config --global color.ui auto
+# 기본 브랜치를 main으로 변경
+> git config --global init.defaultBranch main
+
+# git push만 하면 로컬 브랜치와 같은 이름의 원격 브랜치를 만들어 줌
+> git config --global push.default current
+
+# git status 추적되지 않은 모든 파일 표시
+> git config --global status.showUntrackedFiles all
+
+# git 파일 이름의 대소문자 변경을 감지
+> git config --global core.ignorecase false
+
+# 병합 충돌을 쉽게 볼 수 있음
+> git config --global merge.conflictStyle zdiff3
 ```
+
 git 기본 환경 설정 - config
 ---
 git을 사용하는데 필요한 설정 정보를 기술한다.
