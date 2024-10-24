@@ -24,6 +24,7 @@ git 설치
 
 # 병합 충돌을 쉽게 볼 수 있음
 > git config --global merge.conflictStyle zdiff3
+
 ```
 
 git 기본 환경 설정 - config
@@ -55,6 +56,30 @@ git을 사용하는데 필요한 설정 정보를 기술한다.
     log = diff-highlight  | less -R
     show = diff-highlight | less -R
     diff = diff-highlight | less -R
+
+> vi ~/.zshrc
+export FZF_DEFAULT_OPTS="--reverse --no-sort --no-hscroll --preview-window=down"
+
+user_name=$(git config user.name)
+fmt="\
+%(if:equals=$user_name)%(authorname)%(then)%(color:green)%(else)%(color:brightred)%(end)%(refname:short)|\
+%(committerdate:relative)|\
+%(subject)"
+
+function select-git-branch() {
+  selected_branch=$(
+    git branch --sort=-committerdate --format=$fmt --color=always \
+    | column -ts'|' \
+    | fzf --ansi --exact --preview='git log --oneline --graph --decorate --color=always -50 {+1}' \
+    | awk '{print $1}' \
+  )
+  BUFFER="${LBUFFER}${selected_branch}${RBUFFER}"
+  CURSOR=$#LBUFFER+$#selected_branch
+  zle redisplay
+}
+zle -N select-git-branch
+bindkey '^b' select-git-branch
+
 ```
 #### 2. alias 설명
 git 단축키 설명.
@@ -82,6 +107,10 @@ git 단축키 설명.
  - git stl은 stash 목록에 변경 내용을 포함하여 확인할 수 있음
 
 ![git_stl_resize](https://github.com/user-attachments/assets/9ac2648e-d9c5-47a0-982b-ece1798fbd7f)
+
+- zsh + fzf로 브랜치 작업 선택및 해당 브랜치의 로그를 볼 수 있게 함
+
+![git_fzf](https://github.com/user-attachments/assets/b3ac16a0-c0de-46bb-8676-8470b3bf32f1)
 
 
 #### 3. 커밋 로그 포멧 설명
