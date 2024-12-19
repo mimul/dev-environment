@@ -149,6 +149,7 @@ Names count to use static import with '*' : 100
     . alt + command + 1 : 수직 분할
     . Goto Next Splitter : alt + tab
     . Goto Next Splitter : alt+ shift + tab
+    . command + 2 : Breakpoints 전체 볼 수 있음, Breakpoints 로컬 tomcat 부팅시간 오래걸릴 수 있어 정리 팔요할 경우 활용
     ```
 
 [getmacapps]: http://www.getmacapps.com
