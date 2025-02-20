@@ -55,7 +55,7 @@
 - AOS(Abuse Open Source) - 오픈 소스 남용.
 
 #### 라벨링
-벨을 붙이면 액션을 명확하게 전달할 수 있고, 코멘크의 우선순위가 명확해져 효율성을 가져올 수 있다. [GihubDocs >Setting >회신템플릿 만들기](https://docs.github.com/ja/get-started/writing-on-github/working-with-saved-replies/creating-a-saved-reply)로 처리하면 외우지 않아도 된다.
+벨을 붙이면 액션을 명확하게 전달할 수 있고, 코멘크의 우선순위가 명확해져 효율성을 가져올 수 있다. [GihubDocs >Setting >회신템플릿 만들기](https://docs.github.com/ko/get-started/writing-on-github/working-with-saved-replies/creating-a-saved-reply)로 처리하면 외우지 않아도 된다.
 | 라벨 | 의미                        | 의도                        |
 | :-- |:--                         |:--                         |
 |Q   | 질문 (Question)              | 질문. 상대방은 답변이 필요합니다.  |
