@@ -14,7 +14,7 @@ StartUp 소프트웨어 개발 조직이 갖추어야 할 문화
   - [리팩토링](https://github.com/mimul/dev-environment/blob/master/refactoring.md) : 좋은 코드를 작성하기 위한 몇가지 지침(리팩토링의 기준점들, 네이밍, 가이드 등)을 제공한다.
   - [오픈 소스](https://github.com/mimul/dev-environment/blob/master/opensource.md) : 오픈 소스 도입시 고혀사항, 라이선스, 괜찮은 오픈 소스들에 대한 정보를 제공한다.
 - [Markdown Template](https://github.com/mimul/dev-environment/blob/master/markdown-template.md) : 필요한 Markdown 문법 등 사용 가이드 제공해 활용도를 높여준다.
-- 기술 블로그(Comming soon)
+- [기술 블로그](https://www.mimul.com/blog)
 
 코드 리뷰 장려
 ---------------
