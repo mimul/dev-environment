@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "api-guide.md",
+                "file": "README.md",
                 "mode": "source",
                 "source": true
               },
               "icon": "lucide-file",
-              "title": "api-guide"
+              "title": "README"
             }
           }
         ]
@@ -170,11 +170,11 @@
   },
   "active": "959434d8f11acdd5",
   "lastOpenFiles": [
+    "api-guide.md",
     "code-review.md",
     "coding-standard-java.md",
     "refactoring.md",
     "static-analysis.md",
-    "api-guide.md",
     "images/version.png",
     "images/etag.png",
     "images/if_match_etag.png",
