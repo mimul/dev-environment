@@ -3,6 +3,7 @@
 코드 리뷰는 개발자의 스킬 향상 뿐만 아니라, 개발 문화 형성에 아주 중요한 요소라고 생각한다. 그런 관점에서 코드 리뷰가 지속가능한 문화로 자리를 잡게하기 위해서 필요한 것들을 여기에 정리한다.
 
 ### 코드 리뷰 기본 원칙
+
 여기서는 코드 리뷰에서 따라야할 기본 원칙들을 정리한다. 될 수 있으면 최소한의 원칙만 작성하는 것으로 한다.
 
 - 리뷰도 프로젝트의 공식 일정과 자원에 포함시킨다.
@@ -55,7 +56,7 @@
 - AOS(Abuse Open Source) - 오픈 소스 남용.
 
 ### 라벨링
-벨을 붙이면 액션을 명확하게 전달할 수 있고, 코멘크의 우선순위가 명확해져 효율성을 가져올 수 있다. [GihubDocs >Setting >회신템플릿 만들기](https://docs.github.com/ko/get-started/writing-on-github/working-with-saved-replies/creating-a-saved-reply)로 처리하면 외우지 않아도 된다.
+벨을 붙이면 액션을 명확하게 전달할 수 있고, 코멘크의 우선순위가 명확해져 효율성을 가져올 수 있다. [GithubDocs >Setting >회신템플릿 만들기](https://docs.github.com/ko/get-started/writing-on-github/working-with-saved-replies/creating-a-saved-reply)로 처리하면 외우지 않아도 된다.
 | 라벨 | 의미                        | 의도                        |
 | :-- |:--                         |:--                         |
 |Q   | 질문 (Question)              | 질문. 상대방은 답변이 필요합니다.  |

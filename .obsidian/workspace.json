@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "README.md",
+                "file": "code-review.md",
                 "mode": "source",
                 "source": true
               },
               "icon": "lucide-file",
-              "title": "README"
+              "title": "code-review"
             }
           }
         ]
@@ -168,9 +168,10 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "959434d8f11acdd5",
+  "active": "8f131dd3d43d6192",
   "lastOpenFiles": [
     "api-guide.md",
+    "README.md",
     "code-review.md",
     "coding-standard-java.md",
     "refactoring.md",
