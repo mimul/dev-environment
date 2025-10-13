@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "code-review.md",
+                "file": "README.md",
                 "mode": "source",
                 "source": true
               },
               "icon": "lucide-file",
-              "title": "code-review"
+              "title": "README"
             }
           }
         ]
@@ -94,7 +94,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "code-review.md",
+                "file": "README.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -104,7 +104,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "Backlinks for code-review"
+              "title": "Backlinks for README"
             }
           },
           {
@@ -155,11 +155,11 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300,
-    "collapsed": true
+    "width": 300
   },
   "left-ribbon": {
     "hiddenItems": {
+      "bases:Create new base": false,
       "switcher:Open quick switcher": false,
       "graph:Open graph view": false,
       "canvas:Create new canvas": false,
@@ -168,11 +168,17 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "8f131dd3d43d6192",
+  "active": "959434d8f11acdd5",
   "lastOpenFiles": [
-    "api-guide.md",
+    "mac-delete.md",
     "README.md",
+    "mac-homebrew.md",
+    "mac-apps.md",
+    "mac-dev-env.md",
+    "mac-git.md",
+    "api-guide.md",
     "code-review.md",
+    "Untitled",
     "coding-standard-java.md",
     "refactoring.md",
     "static-analysis.md",
