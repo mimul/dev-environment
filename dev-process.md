@@ -14,8 +14,7 @@ Trello, Github, Slack을 활용한 개발 프로세스
 + `리뷰에 들어가면 [Review(Sprint1)] 리스트로 옯기고`
 + `개발 브랜치가 병합하여 테스트를 완료하면 [Done(Sprint1)] 리스트에 카드를 옮기고 해당 기능을 클로즈한다.`
 
-![trello](https://imgur.com/BwOKpER)
-
+[trello](https://imgur.com/BwOKpER)
 
 1.2 Trello 카드 내용은 Description란에는 이슈 링크를 걸어주거나 Wiki 링크를 걸어줘, 해당 스토리의 정보를 알 수 있도록 해준다. 그리고 Spec을 참조하여 Checklist를 추가해 완료조건을 기술해 개발해가면서 하나씩 처리해 나간다.
 
