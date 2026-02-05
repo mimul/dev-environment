@@ -17,14 +17,12 @@ Trello, Github, Slack을 활용한 개발 프로세스
 
 1.2 Trello 카드 내용은 Description란에는 이슈 링크를 걸어주거나 Wiki 링크를 걸어줘, 해당 스토리의 정보를 알 수 있도록 해준다. 그리고 Spec을 참조하여 Checklist를 추가해 완료조건을 기술해 개발해가면서 하나씩 처리해 나간다.
 
-![사진 3][trello_card]
+![trello_card](https://imgur.com/JV2Yibk.png)
 
 1.3 카드 처리 및 이동시 Slack Alert를 줘 실시간으로 처리가 가능하다.
 
 ![사진 4][trello_alert]
 
-[trello]: http://www.mimul.com/pebble/default/images/blog/Projects/trello.png
-[trello_card]: http://www.mimul.com/pebble/default/images/blog/Projects/trello_card.png
 [trello_alert]: http://www.mimul.com/pebble/default/images/blog/Projects/trello_alert.png
 
 #### 2. Branch 만들고 Pull Request, Merge 하기
