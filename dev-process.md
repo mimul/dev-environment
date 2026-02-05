@@ -14,7 +14,7 @@ Trello, Github, Slack을 활용한 개발 프로세스
 + `리뷰에 들어가면 [Review(Sprint1)] 리스트로 옯기고`
 + `개발 브랜치가 병합하여 테스트를 완료하면 [Done(Sprint1)] 리스트에 카드를 옮기고 해당 기능을 클로즈한다.`
 
-[trello](https://imgur.com/BwOKpER)
+![trello](https://i.imgur.com/BwOKpER.png)
 
 1.2 Trello 카드 내용은 Description란에는 이슈 링크를 걸어주거나 Wiki 링크를 걸어줘, 해당 스토리의 정보를 알 수 있도록 해준다. 그리고 Spec을 참조하여 Checklist를 추가해 완료조건을 기술해 개발해가면서 하나씩 처리해 나간다.
 
@@ -67,11 +67,11 @@ Trello, Github, Slack을 활용한 개발 프로세스
 ```
 - Push 후 Github의 Repository로 이동해서 Compare & pull request 버튼 클릭하고, 코멘트[To close VOY-201(Jira Issue 번호), 혹은 Github Issue 사용하면 #1234로] 남기고 Create pull request 버튼 클릭한다.
 
-	![create_pullrequest](https://imgur.com/qJrfKKW)]
+![create_pullrequest](https://imgur.com/qJrfKKW.png)
 
 - 이때 Pull Request 정보가 Slack을 통해 담당자에게 보내지게 된다.
 
-	![slack_pullrequest](https://imgur.com/92B26Ty)]
+![slack_pullrequest](https://imgur.com/92B26Ty.png)
 
 2.8 리뷰 수행
 - 리뷰어는 file change 버튼을 눌러 master 브랜치와의 소스 차이를 보면서 리뷰어의 의견이 있을 경우 소스 중간에 원하는 자리에 코멘트를 남긴다.
