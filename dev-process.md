@@ -21,9 +21,7 @@ Trello, Github, Slack을 활용한 개발 프로세스
 
 1.3 카드 처리 및 이동시 Slack Alert를 줘 실시간으로 처리가 가능하다.
 
-![사진 4][trello_alert]
-
-[trello_alert]: http://www.mimul.com/pebble/default/images/blog/Projects/trello_alert.png
+![trello_alert](https://imgur.com/XraGnho.png)
 
 #### 2. Branch 만들고 Pull Request, Merge 하기
 2.1 소스 리모트와 동기화
