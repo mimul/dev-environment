@@ -2,8 +2,7 @@ Trello, Github, Slack을 활용한 개발 프로세스
 ======================
 개발 흐름
 ---------------
-![사진 1][dev_process]
-[dev_process]: http://www.mimul.com/pebble/default/images/blog/Projects/dev_process.png
+![dev_process](https://imgur.com/qTCh8Sh.png)
 
 개발 프로세스(Trello, Github, Slack)
 ---------------
