@@ -11,6 +11,7 @@ StartUp 소프트웨어 개발 조직이 갖추어야 할 문화
   - [개발 프로세스 가이드](https://github.com/mimul/dev-environment/blob/master/dev-process.md): 최신 트렌드를 반영한 최소한의 개발 프로세스에 대한 가이드를 제공한다.(Trello + Github + Slack)
   - [코드리뷰](https://github.com/mimul/dev-environment/blob/master/code-review.md) : 코드 리뷰에 필요한 정보를 제공한다.
   - [API 가이드](https://github.com/mimul/dev-environment/blob/master/api-guide.md) : API 설계에 참고될 만한 정보를 제공한다.
+  - [로그 설정 가이드](https://github.com/mimul/dev-environment/blob/master/log-guide.md) : 로그 처리에 참고할 만한 정보를 제공한다.
 - 좋은 코드 작성하기
   - [정적분석](https://github.com/mimul/dev-environment/blob/master/static-analysis.md)
   - [리팩토링](https://github.com/mimul/dev-environment/blob/master/refactoring.md) : 좋은 코드를 작성하기 위한 몇가지 지침(리팩토링의 기준점들, 네이밍, 가이드 등)을 제공한다.

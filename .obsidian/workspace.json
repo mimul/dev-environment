@@ -14,7 +14,7 @@
               "type": "markdown",
               "state": {
                 "file": "README.md",
-                "mode": "source",
+                "mode": "preview",
                 "source": true
               },
               "icon": "lucide-file",
@@ -168,18 +168,19 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "959434d8f11acdd5",
+  "active": "8f131dd3d43d6192",
   "lastOpenFiles": [
+    "log-guide.md",
+    "api-guide.md",
+    "code-review.md",
+    "coding-standard-java.md",
     "mac-delete.md",
     "README.md",
     "mac-homebrew.md",
     "mac-apps.md",
     "mac-dev-env.md",
     "mac-git.md",
-    "api-guide.md",
-    "code-review.md",
     "Untitled",
-    "coding-standard-java.md",
     "refactoring.md",
     "static-analysis.md",
     "images/version.png",
