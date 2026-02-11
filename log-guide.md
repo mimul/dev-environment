@@ -30,7 +30,7 @@ Apache와 nginx 액세스 로그에서 자주 사용되는 표준 키 이름을 
 |Combined Log Format|클라이언트 IP 주소|remote_host|remote_addr|
 ||인증 사용자|remote_user|remote_user|
 ||타임스탬프|time|time_local|
-||리퀘스트 ※1|request|request|
+||요청 ※1|request|request|
 ||HTTP 상태 코드|status|status|
 ||응답 크기|bytes_sent|body_bytes_sent|
 ||레퍼러|referer|http_referer|
@@ -46,7 +46,7 @@ Apache와 nginx 액세스 로그에서 자주 사용되는 표준 키 이름을 
 
 ### 로그 레벨
 
-주요 로그 레벨은 아래 표와 같습니다. [RFC 5424 - The Syslog Protocol](https://datatracker.ietf.org/doc/html/rfc5424) 의 Severity 정의와 [Android의 로깅 정의](https://source.android.com/docs/core/tests/debug/understanding-logging?hl=ko) 와 일관성을 갖추어 시스템의 운영 감시와 개발 효율의 두가지를 목표로 한다.
+주요 로그 레벨은 아래 표와 같다. [RFC 5424 - The Syslog Protocol](https://datatracker.ietf.org/doc/html/rfc5424) 의 Severity 정의와 [Android의 로깅 정의](https://source.android.com/docs/core/tests/debug/understanding-logging?hl=ko) 와 일관성을 갖추어 시스템의 운영 감시와 개발 효율의 두가지를 목표로 한다.
 
 |레벨|설명|목적|지역|개발|검증|프로덕션|
 |---|---|---|---|---|---|---|
@@ -64,13 +64,13 @@ Apache와 nginx 액세스 로그에서 자주 사용되는 표준 키 이름을 
 
 ## 보안
 
-- 기밀 정보를 기록하지 않습니다. 꼭 필요한 경우 마스킹.
-    - 세션 ID, 액세스 토큰, 비밀번호, API 키, 신용카드 번호, 개인정보(PII), 사용자가 수집에 동의하지 않은 정보(GDPR)
+- 기밀 정보를 기록하지 않는다. 꼭 필요한 경우 마스킹.
+    - 세션 ID, 액세스 토큰, 비밀번호, API 키, 신용카드 번호, 개인정보, 사용자가 수집에 동의하지 않은 정보
         - 실수로 출력되지 않도록 로그 출력의 프레임 워크 측에서도 마스킹이나 omits 같은 빌드를 실시한다
         - 기밀 필드를 제외한, Java로 말하는 toString() 메소드나 DTO(구조체 등)를 만들어 둔다
 - 액세스 제어.
     - 로그의 무단 변조를 방지하기 위해 일단 작성되면 변경 및 삭제할 수 없는 IAM 역할 설정을 수행한다.
-    - 브라우징 제어도 필요한 멤버에게만 좁히도록 한다
+    - 브라우징 제어도 필요한 멤버에게만 하도록 한다
 - 사용자용 로그와 개발자용 로그는 분리.
     - stacktrace나 외부 API, DB가 출력하는 에러 메시지( `SQLException: Connection refused for user 'root'@'db-host'`) 등은 공격의 힌트가 되기 때문에
     - 사용자를 위한 화면 메시지는 사용자 친화적인 내용을 표시하고 개발자를 위한 자세한 내용은 로그에 표시한다.
@@ -89,7 +89,7 @@ Apache와 nginx 액세스 로그에서 자주 사용되는 표준 키 이름을 
     - Python logging 모듈을 사용하는 경우 f 문자열이 아닌 % 형식의 자리 표시자를 사용하여 로그 수준이 출력 대상이 아닌 경우 인수 렌더링 처리를 방지한다.
         - ✅️ 좋은 예:`logging.debug("Processing user data: %s", user_object)`
         - ❌️ 나쁜 예:`logging.debug(f"Processing user data: {user_object}")`
-    - 구조화 로그의 경우, 어플리케이션측에서 toString() 등을 호출하지 않고, 로거측에 맡긴다.
+    - 구조화 로그의 경우, 어플리케이션측에서 toString() 등을 호출하지 않고 로거측에 맡긴다.
         - 실제로 로그 출력되는 경우에만 직렬화를 한정할 수 있다.
 - 로그 출력 분기 작성
     - slf4j 등의 경우 `if (logger.isDebugEnabled()) {...}`등과 로그 레벨에 따라 분기시킨다. 특히 로그 출력용으로 문자열 가공하는 경우에는 필수로 한다
@@ -97,12 +97,12 @@ Apache와 nginx 액세스 로그에서 자주 사용되는 표준 키 이름을 
 주의점은 다음과 같다.
 
 - for 루프에서는 모든 로그를 남기는 것은 좋지 않다. 
-    - 1000건에 1번 등, 샘플링한 로그 출력을 실시한다.
+    - 1,000건에 1번 등, 샘플링한 로그 출력을 실시한다.
 - 파일명·행 번호는 로그 출력 항목으로 하지 않는다.
-    - 로그 항목으로서 「파일명」이나 「행 번호」를 취득하는 처리는 스택 트레이스로부터 취득하는 경우는 부하가 높아, 성능 학화의 원인이 될 수 있다.
-    - 로컬 환경만 허용하며, 배치 환경에는 출력하지 않는다. Java이면 로거 이름에서 파일 이름을 식별하는 것이 쉽기 때문에.
-- 애플리케이션 측에서 성능 문제가 의심되는 경우 로그 출력을 의심해 봐야한다.
-    - 특히 SQL 로그 등을 대량으로 출력하는 경우, 거기가 느린 경우도 있다.
+    - 로그 항목으로서 「파일명」이나 「행 번호」를 취득하는 처리는 스택 트레이스로부터 취득하는 경우는 부하가 높아, 성능 저화의 원인이 될 수 있다.
+    - 로컬 환경만 허용하며, 배치 환경에는 출력하지 않는다. Java면 로거 이름에서 파일 이름을 식별하는 것이 쉽기 때문에.
+- 애플리케이션 측에서 성능 문제가 의심되는 경우 로그 출력을 의심해 봐야 한다.
+    - 특히 SQL 로그 등을 대량으로 출력하는 경우 거기가 느린 경우도 있다.
 
 logback.xml 설정 예
 

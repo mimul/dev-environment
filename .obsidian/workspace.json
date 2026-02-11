@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "README.md",
-                "mode": "preview",
+                "file": "log-guide.md",
+                "mode": "source",
                 "source": true
               },
               "icon": "lucide-file",
-              "title": "README"
+              "title": "log-guide"
             }
           }
         ]
@@ -94,7 +94,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "README.md",
+                "file": "log-guide.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -104,7 +104,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "Backlinks for README"
+              "title": "Backlinks for log-guide"
             }
           },
           {
@@ -170,12 +170,12 @@
   },
   "active": "8f131dd3d43d6192",
   "lastOpenFiles": [
+    "README.md",
     "log-guide.md",
     "api-guide.md",
     "code-review.md",
     "coding-standard-java.md",
     "mac-delete.md",
-    "README.md",
     "mac-homebrew.md",
     "mac-apps.md",
     "mac-dev-env.md",
