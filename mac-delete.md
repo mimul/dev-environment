@@ -30,8 +30,8 @@ Mac에서 개발자가 자주 사용하는 앱들에 대해서 설치, 설정 �
 
 **Google Chrome**
 ```
-~/Library/Application\ Support/discord/Cache
-~/Library/Application\ Support/discord/Code\ Cache
+~/Library/Application\ Support/Google/Chrome/Snapshots
+~/Library/Application\ Support/Google/Chrome/Profile\ 1/Service Worker/CacheStorage
 ```
 
 **MS Office**
