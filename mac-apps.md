@@ -4,7 +4,7 @@ Mac에서 개발자가 자주 사용하는 앱들에 대해서 설치, 설정 �
 
 Mac 기본 앱 자동 설치
 ---------------
-[getmacapps][getmacapps]에서 설치할 기본앱들을 설정하고 자동 설치 URL 받아서 맥에서 자동 설치한다. 필요한 앱은 `Chrome, Firefox, Dropbox(Spec 등의 문서 저장 및 공유 도구로 활용), Evernote(개발 등의 메모장으로 활용), FileZilla, Sublime Text 2, iterm2, Alfred` 들을 선택하고 `install these!`를 클릭하면 아래 커맨드를 알려준다. 이 커맨드를 맥에서 실행하면 자동으로 선택된 앱들이 설치된다.
+[getmacapps](http://www.getmacapps.com)에서 설치할 기본앱들을 설정하고 자동 설치 URL 받아서 맥에서 자동 설치한다. 필요한 앱은 `Chrome, Firefox, Dropbox(Spec 등의 문서 저장 및 공유 도구로 활용), Evernote(개발 등의 메모장으로 활용), FileZilla, Sublime Text 2, iterm2, Alfred` 들을 선택하고 `install these!`를 클릭하면 아래 커맨드를 알려준다. 이 커맨드를 맥에서 실행하면 자동으로 선택된 앱들이 설치된다.
 ```
 $ curl -s http://www.getmacapps.com/raw/d | sh
 ```
@@ -17,6 +17,7 @@ $ curl -s http://www.getmacapps.com/raw/d | sh
 - 업무용 채팅 : [Slack](https://slack.com/apps)
 - 기타 채팅 : [Telegram](https://www.telegram.org/)
 - 압축 유틸리티 : [The Unarchiver](https://itunes.apple.com/en/app/the-unarchiver/id425424353?mt=12)
+- 터미널 : [Ghostty](https://ghostty.org/)
 
 Sublime Text 2 단축키 정보
 ---------------
@@ -152,4 +153,32 @@ Names count to use static import with '*' : 100
     . command + 2 : Breakpoints 전체 볼 수 있음, Breakpoints 로컬 tomcat 부팅시간 오래걸릴 수 있어 정리 팔요할 경우 활용
     ```
 
-[getmacapps]: http://www.getmacapps.com
+Ghostty 설정
+---------------
+```
+theme = "IR Black"
+maximize = true
+font-family = "MesloLGS NF"
+font-family = "Noto Sans CJK KR"
+background-opacity = 0.8
+macos-titlebar-style = tabs
+background-blur = true
+adjust-cell-height = 2
+font-thicken = true
+keybind = ctrl+h=goto_split:left
+keybind = ctrl+l=goto_split:right
+window-inherit-working-directory = true
+shell-integration = detect
+
+quick-terminal-position = "right"
+quick-terminal-screen = "main"
+quick-terminal-animation-duration = 0.3
+keybind = "cmd+shift+t=toggle_quick_terminal"
+
+clipboard-write = allow
+
+clipboard-trim-trailing-spaces = true
+macos-titlebar-style = tabs
+window-new-tab-position = current
+copy-on-select = clipboard
+```
