@@ -112,12 +112,41 @@ logback.xml 설정 예
     <encoder class="net.logstash.logback.encoder.LogstashEncoder" />
   </appender>
   <appender name="ASYNC_JSON_STDOUT" class="ch.qos.logback.classic.AsyncAppender">
+    <includeContext>true</includeContext>  
+    <includeCallerData>true</includeCallerData>
     <discardingThreshold>0</discardingThreshold>
-    <queueSize>2048</queueSize>
+    <queueSize>4096</queueSize>
+    <neverBlock>true</neverBlock>  
+ .  <maxFlushTime>60000</maxFlushTime>
     <appender-ref ref="JSON_STDOUT" />
   </appender>
   <root level="INFO">
     <appender-ref ref="ASYNC_JSON_STDOUT" />
   </root>
+  <statusListener class="ch.qos.logback.core.status.NopStatusListener"/>  
+  <shutdownHook />
 </configuration>
+```
+
+@Async에서도 traceId 유지하는 방법
+
+```
+public class ContextDecorator implements TaskDecorator {  
+   @Override  
+   public Runnable decorate(Runnable runnable) {  
+      ServletRequestAttributes attributes = (ServletRequestAttributes) RequestContextHolder.getRequestAttributes();  
+      Map<String, String> callerThreadContext = MDC.getCopyOfContextMap();  
+      return () -> {  
+         try {  
+            if (MapUtils.isNotEmpty(callerThreadContext)) {  
+               MDC.setContextMap(callerThreadContext);  
+            }  
+            RequestContextHolder.setRequestAttributes(attributes, true);  
+            runnable.run();  
+         } finally {  
+            RequestContextHolder.resetRequestAttributes();  
+         }  
+      };  
+   }  
+}
 ```
