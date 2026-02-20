@@ -24,7 +24,7 @@ Mac에서 개발자가 자주 사용하는 앱들에 대해서 설치, 설정 �
 /Library/Logs
 
 ~/.cache
-~/Library/Caches
+~/Library/Caches(특히 ~/Library/Caches/JetBrains 디렉토리에 과거 IDE 지움, ~/Library/Caches/Google 디렉토리에 Android 등 과거 IDE들 지움)
 ~/Library/Logs
 ~/Library/Metadata
 ```
