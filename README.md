@@ -10,6 +10,7 @@ StartUp 소프트웨어 개발 조직이 갖추어야 할 문화
   - [Mac에서 저장공간 확보하기](https://github.com/mimul/dev-environment/blob/master/mac-delete.md)
   - [개발 프로세스 가이드](https://github.com/mimul/dev-environment/blob/master/dev-process.md): 최신 트렌드를 반영한 최소한의 개발 프로세스에 대한 가이드를 제공한다.(Trello + Github + Slack)
 - 좋은 코드 작성하기
+  - [언어 독립적인 도메인 중심 코딩 스타일](https://github.com/mimul/dev-environment/blob/master/coding-style.md) : 코딩 철학, 설계, 코드 퀄리티를 높일 수 있는 스타일을 제공한다. 
   - [코드 리뷰](https://github.com/mimul/dev-environment/blob/master/code-review.md) : 코드 리뷰에 필요한 정보를 제공한다.
   - [API 가이드](https://github.com/mimul/dev-environment/blob/master/api-guide.md) : API 설계에 참고될 만한 정보를 제공한다.
   - [로그 설정 가이드](https://github.com/mimul/dev-environment/blob/master/log-guide.md) : 로그 처리에 참고할 만한 정보를 제공한다.
